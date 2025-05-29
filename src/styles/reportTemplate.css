@@ -1,0 +1,668 @@
+/* Albany Partners Report Template Styles - Fixed Version */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    /* Original Colors */
+    --primary: #002B5C;        /* Deep navy blue */
+    --primary-light: #1A4D8C;  /* Lighter navy */
+    --secondary: #FFC20E;      /* Warm gold accent */
+    --secondary-light: #FFD659;/* Lighter gold */
+    
+    /* Albany Brand Colors (available but not fully replacing original) */
+    --albany-stone: #c2c0ae;
+    --albany-pink: #d50b51;
+    --albany-pale-grey: #c6c6c6;
+    --albany-railings: #36393e;
+    --albany-grey: #62626c;
+    
+    /* Candidate colors - keep original */
+    --sarah: #002B5C;          /* Navy for Sarah */
+    --james: #FFC20E;          /* Gold for James */
+    --emily: #5b21b6;          /* Purple for Emily */
+    
+    /* Background Colors */
+    --bg-main: #fff;
+    --bg-card: #fff;
+    --bg-alt: #f8f9fa;
+    --text-main: #333333;
+    --text-secondary: #6b7280;
+    --border: #e5e7eb;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -1px rgba(0, 0, 0, 0.05);
+    --radius: 4px;
+    --radius-lg: 8px;
+    
+    /* Typography - add Poppins but keep Georgia as fallback */
+    --font-heading: 'Poppins', 'Georgia', serif;
+    --font-body: 'Poppins', 'Roboto', sans-serif;
+}
+
+/* Base Styles */
+.report-container * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.report-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--bg-card);
+    box-shadow: var(--shadow);
+    position: relative;
+    font-family: var(--font-body);
+    line-height: 1.6;
+    font-size: 16px;
+    color: var(--text-main);
+}
+
+.report-content {
+    padding: 40px;
+}
+
+/* Typography */
+.report-container h1, 
+.report-container h2, 
+.report-container h3, 
+.report-container h4 {
+    font-family: var(--font-heading);
+    font-weight: 500; /* Poppins Medium */
+    line-height: 1.3;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.report-container h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.report-container h2 {
+    font-size: 1.6rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.report-container h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 60px;
+    background: var(--secondary);
+}
+
+.report-container h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.report-container h4 {
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.report-container p {
+    margin-bottom: 1.2rem;
+    color: var(--text-main);
+}
+
+/* Modern Header */
+.report-header {
+    background-color: var(--primary);
+    color: white;
+    padding: 2rem 3rem;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.report-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.client-name {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    font-weight: 300;
+    color: white;
+}
+
+.header-right {
+    text-align: right;
+}
+
+.date {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.reference {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    color: white;
+}
+
+/* Executive Summary Card */
+.executive-summary {
+    background-color: var(--bg-card);
+    padding: 2rem;
+    margin: -3rem 2rem 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    position: relative;
+    z-index: 1;
+}
+
+.summary-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.summary-title h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.summary-title h2::after {
+    display: none;
+}
+
+.summary-icon {
+    background-color: var(--primary);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.key-insights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.insight-card {
+    flex: 1 1 300px;
+    background-color: var(--bg-alt);
+    padding: 1.2rem;
+    border-radius: var(--radius);
+    border-left: 3px solid var(--primary);
+}
+
+.insight-card h4 {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+
+.insight-emoji {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Client Requirements */
+.client-requirements {
+    background-color: var(--bg-card);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 2rem;
+}
+
+.requirements-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.requirements-title h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.requirements-title h2::after {
+    display: none;
+}
+
+.requirements-icon {
+    background-color: var(--secondary);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.requirements-list {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.requirements-list li {
+    margin-bottom: 0.75rem;
+    padding-left: 2rem;
+    position: relative;
+    color: var(--text-main);
+}
+
+.requirements-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* Candidates comparison */
+.candidates {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.candidate-card {
+    flex: 1 1 350px;
+    background-color: var(--bg-card);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+    border: 1px solid var(--border);
+}
+
+.candidate-card:hover {
+    transform: translateY(-5px);
+}
+
+.candidate-header {
+    padding: 1.5rem;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.candidate-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+    z-index: 1;
+}
+
+.candidate-1 .candidate-header {
+    background-color: var(--sarah);
+}
+
+.candidate-2 .candidate-header {
+    background-color: var(--james);
+}
+
+.candidate-3 .candidate-header {
+    background-color: var(--emily);
+}
+
+.candidate-photo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: block;
+    position: relative;
+    z-index: 2;
+    background-color: rgba(255,255,255,0.2);
+    border: 3px solid rgba(255,255,255,0.3);
+    background-size: cover;
+    background-position: center;
+}
+
+.candidate-name {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 0.2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.candidate-title {
+    text-align: center;
+    opacity: 0.9;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 2;
+    font-size: 1rem;
+}
+
+.candidate-body {
+    padding: 1.5rem;
+}
+
+.candidate-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.stat-item {
+    flex: 1 1 calc(50% - 0.75rem);
+    background-color: var(--bg-alt);
+    padding: 0.75rem;
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.2rem;
+}
+
+.stat-value {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-main);
+}
+
+.candidate-info {
+    margin-bottom: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.info-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.info-emoji {
+    font-size: 1.2rem;
+    margin-right: 0.75rem;
+    flex-shrink: 0;
+}
+
+.info-content {
+    flex: 1;
+}
+
+.info-label {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.2rem;
+}
+
+.info-value {
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+/* Spider Chart */
+.spider-chart-container {
+    background-color: var(--bg-card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    padding: 2rem;
+    margin: 2rem 0;
+    border: 1px solid var(--border);
+}
+
+.chart-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.spider-chart {
+    position: relative;
+    width: 600px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.spider-chart-legend {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    background-color: var(--bg-alt);
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.legend-sarah {
+    background-color: var(--sarah);
+}
+
+.legend-james {
+    background-color: var(--james);
+}
+
+.legend-emily {
+    background-color: var(--emily);
+}
+
+/* Next steps */
+.next-steps {
+    background-color: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin: 3rem 0;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--primary);
+}
+
+.next-steps-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.next-steps-header h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.next-steps-header h2::after {
+    display: none;
+}
+
+.next-steps-icon {
+    background-color: var(--primary);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.action-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+.action-items li {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    position: relative;
+    color: var(--text-main);
+}
+
+.action-items li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* Footer */
+.report-footer {
+    background-color: var(--primary);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer-logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-text {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .report-content {
+        padding: 20px;
+    }
+    
+    .report-header {
+        padding: 1.5rem;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .header-right {
+        text-align: left;
+    }
+    
+    .executive-summary {
+        margin: -2rem 1rem 2rem;
+        padding: 1.5rem;
+    }
+    
+    .candidates {
+        flex-direction: column;
+    }
+    
+    .spider-chart {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        max-width: 350px;
+    }
+}
+
+/* Optional Albany Partners accent classes - can be applied selectively */
+.albany-accent {
+    border-left: 4px solid var(--albany-pink) !important;
+}
+
+.albany-icon {
+    background-color: var(--albany-pink) !important;
+}
+
+.albany-border {
+    border-color: var(--albany-pink) !important;
+}
+
+.albany-text {
+    color: var(--albany-railings) !important;
+}
+
+.albany-bg {
+    background-color: var(--albany-railings) !important;
+    color: white !important;
+}
+
+/* Optional Albany Partners Header */
+.albany-header {
+    background-color: var(--albany-railings);
+    color: white;
+}
+
+/* Optional Albany Partners Card */
+.albany-card {
+    border-left: 4px solid var(--albany-pink);
+}
+
+/* Optional Albany Partners Button */
+.albany-button {
+    background-color: var(--albany-pink);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.albany-button:hover {
+    background-color: #b80944;
+}

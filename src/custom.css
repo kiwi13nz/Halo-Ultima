@@ -1,0 +1,94 @@
+/* Custom variable colors for candidates */
+:root {
+  --sarah: #4361ee;
+  --james: #e63946;
+  --emily: #06d6a0;
+}
+
+/* Animation for loading spinner */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Skills comparison styling */
+.bar-container {
+  position: relative;
+  height: 12px;
+  width: 100%;
+  background-color: #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.requirement-bar {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.requirement-level {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-right: 2px dashed rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.candidate-bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  border-radius: 6px;
+}
+
+.sarah-bar {
+  background-color: var(--sarah);
+}
+
+.james-bar {
+  background-color: var(--james);
+}
+
+.emily-bar {
+  background-color: var(--emily);
+}
+
+.difference-indicator {
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.positive {
+  color: #10b981;
+}
+
+.negative {
+  color: #ef4444;
+}
+
+/* Candidate detail card styling */
+.card {
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  background-color: white;
+  overflow: hidden;
+}
+
+.card-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.card-body {
+  padding: 1.5rem;
+}

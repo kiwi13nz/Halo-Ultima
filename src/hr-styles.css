@@ -1,0 +1,444 @@
+/* Halo Executive Search Design System */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* Halo Brand Colors */
+    --halo-verde-petroleo: #4A6460;     /* Principal - Verde petróleo */
+    --halo-rosa-claro: #E7D0C5;         /* Rosa claro */
+    --halo-beige: #E4D8C5;              /* Beige */
+    --halo-gris-azulado: #5F6D74;       /* Gris azulado */
+    --halo-blanco: #FFFFFF;             /* Blanco */
+    
+    /* Semantic Color Assignments */
+    --primary: var(--halo-verde-petroleo);
+    --primary-light: #5A746F;
+    --secondary: var(--halo-rosa-claro);
+    --secondary-light: #F1E0D7;
+    --accent: var(--halo-beige);
+    --accent-light: #EFE7DC;
+    --gray: var(--halo-gris-azulado);
+    --gray-light: #7A8790;
+    --white: var(--halo-blanco);
+    
+    /* Candidate Colors - Softer palette */
+    --sarah: var(--halo-verde-petroleo);
+    --james: var(--halo-gris-azulado);
+    --emily: #8B7B8B; /* Soft purple-gray */
+    
+    /* Insight Colors */
+    --core-need: var(--halo-verde-petroleo);
+    --insight-primary: var(--halo-gris-azulado);
+    --insight-secondary: var(--halo-rosa-claro);
+    --insight-tertiary: var(--halo-beige);
+    
+    /* Semantic Colors */
+    --green: #6B8F71;
+    --yellow: #C9A96E;
+    --red: #A67B7B;
+    --light-gray: #F8F8F8;
+    --border: #E0DDD8;
+    
+    /* Background Colors */
+    --bg-main: var(--halo-blanco);
+    --bg-card: var(--halo-blanco);
+    --bg-alt: var(--halo-beige);
+    --text-main: #333333;
+    --text-secondary: var(--halo-gris-azulado);
+    
+    /* Typography */
+    --font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+    font-family: var(--font-family);
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family);
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* Halo-specific component styles */
+.halo-header {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.halo-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(74, 100, 96, 0.1);
+}
+
+.halo-button-primary {
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 500;
+    font-family: var(--font-family);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.halo-button-primary:hover {
+    background-color: var(--primary-light);
+}
+
+.halo-button-secondary {
+    background-color: var(--secondary);
+    color: var(--primary);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 500;
+    font-family: var(--font-family);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.halo-button-secondary:hover {
+    background-color: var(--secondary-light);
+}
+
+/* Update existing components with new colors */
+.hr-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(74, 100, 96, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.hr-title {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--secondary);
+    padding-bottom: 0.5rem;
+    margin-top: 1.5rem;
+    font-weight: 600;
+    font-family: var(--font-family);
+}
+
+/* Report Header */
+.report-header {
+    background-color: var(--primary) !important;
+    color: var(--white) !important;
+    padding: 2rem 3rem;
+    border-bottom: 4px solid var(--secondary) !important;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary) !important;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    color: var(--white) !important;
+    font-family: var(--font-family);
+}
+
+.report-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--white) !important;
+    font-family: var(--font-family);
+}
+
+.client-name {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    font-weight: 300;
+    color: var(--white) !important;
+    font-family: var(--font-family);
+}
+
+/* Executive Summary */
+.executive-summary {
+    background-color: var(--bg-card);
+    padding: 2rem;
+    margin: -3rem 2rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(74, 100, 96, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.summary-icon {
+    background-color: var(--primary);
+    color: var(--white);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Key Insights */
+.insight-card {
+    background-color: var(--bg-alt);
+    padding: 1.2rem;
+    border-radius: 8px;
+    border-left: 3px solid var(--primary);
+}
+
+/* Client Requirements */
+.requirements-icon {
+    background-color: var(--gray);
+    color: var(--white);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.requirements-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* Understanding Requirements */
+.core-need {
+    border-left: 5px solid var(--primary);
+    background-color: rgba(74, 100, 96, 0.08);
+}
+
+.insight-primary {
+    border-left: 5px solid var(--gray);
+    background-color: rgba(95, 109, 116, 0.08);
+}
+
+.insight-secondary {
+    border-left: 5px solid var(--secondary);
+    background-color: rgba(231, 208, 197, 0.15);
+}
+
+.insight-tertiary {
+    border-left: 5px solid var(--accent);
+    background-color: rgba(228, 216, 197, 0.15);
+}
+
+/* Candidate Cards */
+.candidate-card {
+    background-color: var(--bg-card);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(74, 100, 96, 0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid var(--border);
+}
+
+/* Competency Analysis */
+.competency-section {
+    background-color: var(--bg-card);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(74, 100, 96, 0.1);
+}
+
+.competency-heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--secondary);
+    padding-bottom: 0.5rem;
+    font-family: var(--font-family);
+}
+
+.weighted-table th {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 0.75rem;
+    text-align: center;
+    font-weight: 500;
+    font-family: var(--font-family);
+}
+
+.weight-cell {
+    background-color: rgba(74, 100, 96, 0.1);
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.top-score {
+    background-color: rgba(107, 143, 113, 0.1);
+    font-weight: 600;
+}
+
+.second-score {
+    background-color: rgba(201, 169, 110, 0.1);
+}
+
+.winner-badge {
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+}
+
+/* Areas to Probe */
+.probe-icon {
+    background-color: var(--primary);
+    color: var(--white);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.probe-question {
+    color: var(--gray);
+    font-weight: 500;
+}
+
+/* Next Steps */
+.next-steps {
+    background-color: var(--bg-card);
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 2px 4px rgba(74, 100, 96, 0.1);
+    border-left: 4px solid var(--primary);
+}
+
+.next-steps-icon {
+    background-color: var(--primary);
+    color: var(--white);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.action-items li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* Footer */
+.report-footer {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 2rem;
+    text-align: center;
+    border-top: 4px solid var(--secondary);
+}
+
+/* App Header and Footer */
+header.bg-white, header.shadow-sm {
+    background-color: var(--primary) !important;
+    color: var(--white) !important;
+}
+
+header .text-pink-600, header .text-gray-900 {
+    color: var(--white) !important;
+}
+
+header .h-8.w-8 {
+    color: var(--secondary) !important;
+}
+
+footer.bg-gray-800 {
+    background-color: var(--primary) !important;
+    border-top: 4px solid var(--secondary);
+}
+
+/* Button overrides */
+.bg-pink-600 {
+    background-color: var(--primary) !important;
+}
+
+.bg-pink-600:hover {
+    background-color: var(--primary-light) !important;
+}
+
+.text-pink-600 {
+    color: var(--primary) !important;
+}
+
+.text-pink-700 {
+    color: var(--primary-light) !important;
+}
+
+.border-pink-500 {
+    border-color: var(--primary) !important;
+}
+
+.bg-pink-50 {
+    background-color: rgba(74, 100, 96, 0.05) !important;
+}
+
+.bg-pink-700 {
+    background-color: var(--primary-light) !important;
+}
+
+.focus\:ring-pink-500:focus {
+    --tw-ring-color: var(--primary) !important;
+}
+
+.focus\:border-pink-500:focus {
+    border-color: var(--primary) !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .report-header {
+        padding: 1.5rem;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .executive-summary {
+        margin: -2rem 1rem 2rem;
+        padding: 1.5rem;
+    }
+}
