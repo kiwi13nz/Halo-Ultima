@@ -27,38 +27,7 @@ This application is a comprehensive assessment platform for Albany Partners, des
 - A Supabase account and project
 - An OpenAI API key
 
-### Installation
-
-1. Clone the repository:
-   ```
-   git clone https://github.com/yourusername/albany-partners-assessment.git
-   cd albany-partners-assessment
-   ```
-
-2. Install dependencies:
-   ```
-   npm install
-   ```
-
-3. Create a `.env` file based on `.env.example` and add your credentials:
-   ```
-   cp .env.example .env
-   ```
-
-4. Set up your Supabase database by running the SQL setup script found in `supabase/schema.sql` in your Supabase SQL editor.
-
-5. Start the development server:
-   ```
-   npm run dev
-   ```
-
-## Database Setup
-
-You'll need to create the following tables in your Supabase database:
-
-1. `jobs` - Stores job information and AI analysis
-2. `candidates` - Stores candidate information linked to jobs
-3. `reports` - Stores final assessment reports
+## Database Setup (in supabase)
 
 The schema for these tables is provided in the `supabase/schema.sql` file.
 
@@ -76,7 +45,7 @@ The schema for these tables is provided in the `supabase/schema.sql` file.
 3. Review and edit the AI-generated assessment criteria
 4. Enter candidate information and upload resumes
 5. Review and edit the AI-generated candidate evaluations
-6. Generate and export the final report
+6. Generate the final report
 
 ## License
 
